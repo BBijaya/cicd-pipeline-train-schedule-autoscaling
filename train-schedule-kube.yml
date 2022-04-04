@@ -60,5 +60,6 @@ spec:
   maxReplicas: 4
   metrics:
     - type: Resource
-      name: cpu
-      targetAvergaeUtilization: 50
+      resource:
+        name: cpu
+        targetAvergaeUtilization: 50

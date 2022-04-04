@@ -45,10 +45,9 @@ spec:
           requests: 
             cpu: 200m
 ---
-
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
-metadata: 
+metadata:
   name: train-schedule
   namespace: default
 spec:
@@ -59,7 +58,7 @@ spec:
   minReplicas: 1
   maxReplicas: 4
   metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        targetAvergaeUtilization: 50
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 50
